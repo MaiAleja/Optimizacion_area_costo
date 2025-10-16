@@ -1,0 +1,75 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #111827;
+  background: #f8c996; /* naranja pastel */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 { margin: 0 0 10px; }
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+}
+
+button {
+  font: inherit;
+}
+
+/* --- INPUTS: visibilidad y edición cómoda --- */
+input, select {
+  color: #111827;        /* asegura texto oscuro */
+  background: #fff;      /* fondo blanco explícito */
+}
+
+/* color del placeholder (pista de texto) */
+input::placeholder,
+select::placeholder {
+  color: #9ca3af;        /* gris medio visible */
+  opacity: 1;
+}
+
+/* quitar flechas de inputs numéricos (Linux/Win/Chrome) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* quitar flechas (Firefox) */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* enfoque visible y agradable */
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;         /* azul */
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+
+/* ✅ re-habilita spinners */
+input[type="number"] { 
+  -moz-appearance: auto;
+  appearance: auto;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: auto;
+  margin: 0;
+}
+
